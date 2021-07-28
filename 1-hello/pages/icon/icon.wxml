@@ -1,0 +1,14 @@
+<!--pages/icon/icon.wxml-->
+<view class="container">
+
+<icon type="success" size='32'></icon>
+<icon type="warn" size="32"></icon>
+
+<text space="emsp">this is china</text>
+<text >this is china</text>
+<input type="text" placeholder="123"></input>
+<input type="text" placeholder="请输入密码" ></input>
+
+</view>
+<button type="primary" >注册</button>
+<button loading="true">loading</button>

@@ -1,0 +1,17 @@
+/* pages/login/login.wxss */
+input{
+  width: 90%;
+  height: 35px;
+  background-color:white;
+  border-radius: 4px;
+  margin: 5px;
+  padding-left: 10px;
+  font-size: small;
+
+}
+.tijiao{
+  width: 100%;
+  background-color: blue;
+  margin-top: 20px;
+  color: white;
+}

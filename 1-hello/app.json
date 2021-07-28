@@ -1,14 +1,54 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages":[   "pages/login/login",
+  "pages/icon/icon",
+    "pages/home/home",
+   "pages/about/about"
+
+
+  
+  
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "我的微信",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+ 
   },
+  "tabBar": {
+    "list": [
+      
+        {
+          "pagePath": "pages/home/home",
+                     "iconPath": "img/nav1.png",
+                     "selectedIconPath": "img/nav1-a.png",
+                     "text": "生命周期简介"
+       },
+       {
+          "pagePath": "pages/about/about",
+                     "iconPath": "img/nav2.png",
+                     "selectedIconPath": "img/nav2-a.png",
+                     "text": "关于"
+       },
+       
+      {
+         "pagePath": "pages/icon/icon",
+                    "iconPath": "img/nav3.png",
+                    "selectedIconPath": "img/nav3-a.png",
+                    "text": "icon"
+      
+     },
+     {
+        "pagePath": "pages/login/login",
+                   "iconPath": "img/nav3.png",
+                   "selectedIconPath": "img/nav3-a.png",
+                   "text": "登录"
+     
+    }
+    ]
+  },
+
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
