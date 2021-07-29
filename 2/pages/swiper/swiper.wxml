@@ -1,0 +1,14 @@
+
+<view>
+<swiper autoplay="2000" interval="2000" indicator-dots circular="true">
+<swiper-item>
+<image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.defanli.com%2Fi3%2F2207302427258%2FO1CN01nMsljd23UDFUhwuUn_%21%212207302427258.jpg_q90.jpg&refer=http%3A%2F%2Fimg.defanli.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1630070661&t=7cf8172e2d26daa3bf643ffd359026c2"></image>
+</swiper-item>
+<swiper-item>
+<image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.leha.com%2FEditor%2F2014-11-15%2F5466fe5252fe2.jpg&refer=http%3A%2F%2Fimg.leha.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1630070723&t=240cb4db792f870560530dab33cf4ddc"></image>
+</swiper-item>
+<swiper-item>
+<image src="https://img1.baidu.com/it/u=3301642898,92830133&fm=26&fmt=auto&gp=0.jpg"></image>
+</swiper-item>
+</swiper>
+</view>

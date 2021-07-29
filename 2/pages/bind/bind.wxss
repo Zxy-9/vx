@@ -1,0 +1,7 @@
+/* pages/bind/bind.wxss */
+.red{
+  background-color: red;
+}
+.green{
+  background-color: green;
+}

@@ -1,0 +1,14 @@
+<view>
+<scroll-view scroll-x>
+<view class="nav">
+<navigator>国际新闻</navigator>
+<navigator>八卦新闻</navigator>
+<navigator>国内新闻</navigator>
+<navigator>IT新闻</navigator>
+<navigator>金融新闻</navigator>
+<navigator>社会新闻</navigator>
+
+</view>
+
+</scroll-view>
+</view>

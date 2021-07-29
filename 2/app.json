@@ -1,13 +1,42 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages":[ 
+    "pages/bind/bind",
+    "pages/flex/felx",
+    "pages/scroll/scroll",
+    "pages/swiper/swiper"  
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      
+      {
+        "pagePath": "pages/swiper/swiper",
+                 
+                   "text": "轮播图"
+     }
+     ,
+     {
+      "pagePath": "pages/scroll/scroll",
+               
+                 "text": "今日头条"
+   } ,
+   {
+    "pagePath": "pages/flex/felx",
+             
+               "text": "flex"
+ },
+ {
+  "pagePath": "pages/bind/bind",
+           
+             "text": "bind"
+}
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

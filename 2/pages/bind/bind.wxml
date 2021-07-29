@@ -1,0 +1,23 @@
+<view class="{{flag? 'red' : 'green' }}">123</view>
+<view wx:if="{{score >= 80}}">优秀</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else="{{score < 60}}">不及格</view>
+<view wx:for="{{list}}">{{index}}:{{item}}</view>
+
+<template name="tem">
+<view>
+<view>name:{{name}}</view>
+<view>age:{{age}}</view>
+</view>
+</template>
+
+<template is="tem" data="{{...datas}}"></template>
+
+<template name="tem1">
+<view wx:for="{{lists}}">
+<view>tem1</view>
+<view>{{item.name}}</view>
+<view>{{item.age}}</view>
+</view>
+</template>
+<template is="tem1" data="{{lists}}"></template>

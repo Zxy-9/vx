@@ -1,0 +1,50 @@
+
+<view class="outer">
+
+
+<view class="inner">
+<view class="inner-img"></view>
+<view class="text">快送</view>
+</view>
+<view class="inner">
+<view class="inner-img"></view>
+<view class="text">快送</view>
+</view>
+<view class="inner">
+<view  class="inner-img"></view>
+<view class="text">快送</view>
+</view>
+<view class="inner">
+<view  class="inner-img"></view>
+<view  class="text">快送</view>
+</view>
+<view class="inner">
+<view  class="inner-img"></view>
+<view class="text">快送</view>
+</view>
+
+
+
+</view>
+
+
+<view>
+<view class="con">
+
+
+<view class="img"></view>
+
+<view class="text1">
+<view class="title">纸牌游戏</view>
+<view class="button">
+<view class="att">关注</view>
+<view class="try">试玩</view>
+</view>
+
+</view>
+
+
+<view class="download">下载</view>
+</view>
+
+</view>

@@ -1,0 +1,8 @@
+/* pages/scroll/scroll.wxss */
+.nav{
+  display: flex;
+  white-space: nowrap;
+}
+.nav navigator{
+     margin: 0 10px;
+}
