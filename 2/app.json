@@ -1,5 +1,6 @@
 {
   "pages":[ 
+    "pages/event/event",
     "pages/bind/bind",
     "pages/flex/felx",
     "pages/scroll/scroll",
@@ -35,6 +36,11 @@
   "pagePath": "pages/bind/bind",
            
              "text": "bind"
+},
+{
+ "pagePath": "pages/event/event",
+          
+            "text": "event"
 }
     ]
   },

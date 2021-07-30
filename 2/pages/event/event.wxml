@@ -1,0 +1,75 @@
+<!--pages/event/event.wxml-->
+<view bindtap="getname">click me</view>
+
+<view>事件分为冒泡事件和非冒泡事件：</view>
+<view>冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递。</view>
+<view>非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递。</view>
+
+<view bindtap="outer">
+outer
+<view catchtap="middle">
+middle
+<view bindtap="inner">
+inner</view>
+
+
+</view>
+
+
+</view>
+
+
+<view>
+
+
+<scroll-view scroll-x>
+
+<view class="nav" >
+
+<block wx:for="{{title}}">
+<navigator url=" " class="{{classArr[index]}}" bindtap="activity" data-index="{{index}}">
+{{item}}
+</navigator>
+</block>
+
+</view>
+
+
+</scroll-view>
+
+</view>
+
+
+
+<view class="content">
+<swiper indicator-dots   circular current="{{currentTab}}">
+<swiper-item wx:for="{{title}}">
+<view class="content">
+{{item}}
+</view>
+
+</swiper-item>
+
+</swiper>
+
+</view>
+
+
+<view >
+<scroll-view scroll-x>
+<block>
+<view class="nav1">
+
+<navigator wx:for="{{title1}}" class="nav1">
+<view>{{item}}</view>
+
+</navigator>
+</view>
+
+</block>
+
+</scroll-view>
+</view>
+
+
+
