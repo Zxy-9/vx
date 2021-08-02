@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/time/time",
+    "pages/statist/satatist"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "番茄时钟",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#c2c2c2",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/time/time",
+        "text": "计时",
+        
+        "iconPath": "img/闹钟.png",
+        "selectedIconPath": "img/闹钟-a.png"
+      },
+      {
+        "pagePath": "pages/statist/satatist",
+        "text": "统计",
+        "iconPath": "img/统计.png",
+        "selectedIconPath": "img/统计-a.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

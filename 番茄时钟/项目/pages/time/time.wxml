@@ -1,0 +1,61 @@
+<view class="page">
+<!--闹钟页-->
+
+<view hidden="{{ifHidden}}">
+
+<!--拖动条-->
+<view class="slider">
+<slider min="5" max="60" show-value="true" activeColor="#eb4e1c"
+step="5" 
+bindchange="listenerSlider"></slider>
+</view>
+
+<!--中间的文字提示-->
+<view class="reminder">
+
+<view class="title">
+选择一个任务
+</view>
+<view class="content">
+在接下来的{{remindrTime}}分钟内，专注做这件事情
+</view>
+
+</view>
+
+<!--ui部分-->
+
+<view class="UI">
+<view wx:for="{{uiAdress}}" class="UIcontent" bindtap="uiAlter" data-index="{{index}}">
+<view>
+<view class="{{item.class}} uiIcon  {{index == uiActive ? 'uiText_active':''}}"></view>
+<view class="uiText {{index == uiActive ? 'uiText_active':''}}">{{item.name}}</view>
+
+</view>
+
+</view>
+
+</view>
+
+<!--底部-->
+
+<view class="footer">
+<view class="footerTitle" bindtap="start">
+开始专注</view>
+</view>
+</view>
+
+<!--计时页-->
+<view class="jishicontainer">
+<view class="jishi" hidden="{{!ifHidden}}">
+
+
+</view>
+
+
+</view>
+
+</view>
+
+
+
+
