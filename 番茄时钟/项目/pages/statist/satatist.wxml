@@ -1,2 +1,27 @@
-<!--pages/statist/satatist.wxml-->
-<text>pages/statist/satatist.wxml</text>
+
+<!--上面的部分-->
+<view class="sum">
+
+<view class="jiricishu box"  wx:for="{{sum}}">
+<view class="title">{{item.title}}</view>
+<view class="content">{{item.val}} </view>
+</view>
+
+
+  
+
+</view>  
+<!--中间的线条-->
+<view class="line"></view>
+
+<!--下面的部分-->
+<view class="text">
+<view class="fenleitongji">
+分类统计
+</view>
+<view class="fenli">
+<view class="jinri">今日</view>
+<view class="leiji">累计</view>
+</view>
+</view>
+<view class="line1"></view>

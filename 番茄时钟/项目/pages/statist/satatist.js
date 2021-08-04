@@ -1,3 +1,6 @@
+
+const app = getApp()
+const util = require('../../utils/util.js')
 // pages/statist/satatist.js
 Page({
 
@@ -5,6 +8,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    sum:[
+      {
+        title:'今日番茄次数',
+        val:'0'
+      },
+      {
+        title:'累计番茄次数',
+        val:'0'
+      },
+      {
+        title:'今日专注时长',
+        val:'0'+'分钟'
+      },
+      {
+        title:'累计专注时长',
+        val:'0'+'分钟'
+      }
+    ]
 
   },
 

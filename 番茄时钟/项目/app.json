@@ -1,7 +1,7 @@
 {
-  "pages":[
-    "pages/time/time",
-    "pages/statist/satatist"
+  "pages":[ "pages/statist/satatist",
+    "pages/time/time"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",

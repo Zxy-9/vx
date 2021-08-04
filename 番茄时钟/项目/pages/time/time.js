@@ -1,4 +1,7 @@
 // pages/time/time.js
+const util = require('../../utils/util.js')
+
+
 Page({
 
   /**
@@ -39,7 +42,14 @@ Page({
     ],
     remindrTime:5,
     uiActive:'0',
-    ifHidden:false
+    ifHidden:false,
+    rate:'',
+    timeStr:'05:00',
+    mTime:300000,
+    okShow:false,
+    pauseShow:true,
+    continueCancleShow:false,
+    timer:null
 
     
     
@@ -61,18 +71,146 @@ Page({
     })
 
   },
+  //开始专注
   start(){
 this.setData({
-  ifHidden:true
+  ifHidden:true,
+  mTime:this.data.remindrTime*60*1000,
+  timeStr:parseInt(this.data.remindrTime)>=10 ? tis.data.time+ ':00' : '0'+ this.data.remindrTime + ':00'
+
 })
+this.drawBg()
+this.drawActive()
+  },
+  drawBg(){
+    var lineWidth = 6 / this.data.rate
+    console.log(lineWidth)
+    var ctx =wx.createCanvasContext('progress_bg')
+    ctx.setLineWidth(lineWidth)
+    ctx.setStrokeStyle('#000000')
+    ctx.setLineCap('round')
+    ctx.beginPath()
+    ctx.arc(400/this.data.rate/2,400/this.data.rate/2,400/this.data.rate/2 - lineWidth,0,2*Math.PI,false)
+    ctx.stroke()
+    ctx.draw()  
+
 
   },
 
+  drawActive(){
+    var _this= this
+
+ var dingshiqi =   setInterval(function(){
+var angle=1.5 + 2*(_this.data.remindrTime*60*1000-_this.data.mTime)/(_this.data.remindrTime*60*1000)
+var currentTime = _this.data.mTime - 100
+_this.setData({
+  mTime:currentTime
+})
+
+if(angle<3.5){
+  if(currentTime%1000 == 0){
+      var timeStr1 = currentTime / 1000;       //秒钟
+      var timeStr2 = parseInt(timeStr1 / 60)  //分钟
+      var timeStr3 = (timeStr1 - timeStr2 * 60)>=10 ? (timeStr1 - timeStr2 * 60):'0' + (timeStr1 - timeStr2 * 60)
+      var timeStr2 = timeStr2 >= 10? timeStr2 :   '0'+timeStr2
+
+
+      _this.setData({
+        timeStr:timeStr2 + ':' + timeStr3
+      })      
+  }
+  var lineWidth = 6 / _this.data.rate
+    console.log(lineWidth)
+    var ctx =wx.createCanvasContext('progress_active')
+    ctx.setLineWidth(lineWidth)
+    ctx.setStrokeStyle('#f1f1f1')
+    ctx.setLineCap('round')
+    ctx.beginPath()
+    ctx.arc(400/_this.data.rate/2,400/_this.data.rate/2,400/_this.data.rate/2 - lineWidth,1.5*Math.PI,angle*Math.PI,false)
+    ctx.stroke()
+    ctx.draw() 
+}else{
+ 
+  var logs = wx.getStorageSync('logs')
+  logs.unishift({
+data:util.formatTime(new Date),
+cate:_this.data.uiActive,
+time:_this.data.time
+
+  })
+  wx.setStorageSync('logs', logs)
+
+
+clearInterval(dingshiqi)
+_this.setData({
+  timeStr:'00:00',
+  okShow:true,
+  pauseShow:false,
+  continueCancleShow:false
+
+})
+}
+
+    },100)
+
+
+   _this.setData({
+     timer:dingshiqi
+   })
+
+
+  },
+
+  pause(){
+   clearInterval(this.data.timer)
+
+   this.setData({
+    pauseShow:false,
+    continueCancleShow:true,
+    okShow:false
+   })
+   
+
+  },
+  continue(){
+    this.drawActive()
+    this.setData({
+      pauseShow:true,
+      continueCancleShow:false,
+      okShow:false
+    })
+  },
+  cancle(){
+    clearInterval(this.data.timer)
+    this.setData({
+      pauseShow:true,
+      continueCancleShow:false,
+      okShow:false,
+      ifHidden:false
+      
+    })
+  },
+  ok(){
+    clearInterval(this.data.timer)
+
+    this.setData({
+      pauseShow:true,
+      continueCancleShow:false,
+      okShow:false,
+      ifHidden:false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-         
+        let res= wx.getSystemInfoSync();
+        let width = res.windowWidth
+        var rate = 750/width
+        console.log(rate)
+        this.setData({
+          rate:rate
+        })
   },
 
   /**

@@ -66,7 +66,46 @@ color: #eb4e1c;
   height: 3000rpx;
 
   background-color: #eb4e1c;
+  overflow: hidden;
 }
 page{
   overflow: hidden;
+}
+.progress{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 140rpx auto;
+  position: relative;
+}
+.progress .progress_bg,.progress_active{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400rpx;
+  height: 400rpx;
+}
+.progress .progress_text{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: aliceblue;
+  left: 120rpx;
+  top: 170rpx;
+  position: absolute;
+  text-align: center;
+}
+/*按钮样式*/
+.btns{
+
+}
+.okBtn,.pauseBtn,.continueBtn,.cancleBtn{
+  height: 80rpx;
+  width: 280rpx;
+  color: white;
+  border: 1px white solid;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+  margin: 0   auto  20rpx auto;
 }
