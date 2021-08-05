@@ -76,7 +76,7 @@ Page({
 this.setData({
   ifHidden:true,
   mTime:this.data.remindrTime*60*1000,
-  timeStr:parseInt(this.data.remindrTime)>=10 ? tis.data.time+ ':00' : '0'+ this.data.remindrTime + ':00'
+  timeStr:parseInt(this.data.remindrTime)>=10 ? this.data.time+ ':00' : '0'+ this.data.remindrTime + ':00'
 
 })
 this.drawBg()
@@ -131,13 +131,12 @@ if(angle<3.5){
     ctx.draw() 
 }else{
  
-  var logs = wx.getStorageSync('logs')
-  logs.unishift({
-data:util.formatTime(new Date),
-cate:_this.data.uiActive,
-time:_this.data.time
-
-  })
+  var logs = wx.getStorageSync('logs') || [];
+  logs.unshift({
+    date:util.formatTime(new Date),
+    cate:_this.data.cateActive,
+    time:_this.data.time
+  });
   wx.setStorageSync('logs', logs)
 
 
